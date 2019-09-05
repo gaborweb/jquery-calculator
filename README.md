@@ -1,2 +1,2 @@
 # jquery-calculator
-Web development basics...
+Just a simple jQuery calculator example.
