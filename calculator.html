@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	$("#equal").click(function(){
+	
+		var number1=parseInt($("#number1").val());
+		var number2=parseInt($("#number2").val());
+		var opSymbol=$("#opSymbol").val();
+		var result;
+		
+		switch(opSymbol){
+		
+			case "+":
+				result=number1+number2;
+				break;
+				
+			case "-":
+				result=number1-number2;
+				break;
+				
+			case "*":
+				result=number1*number2;
+				break;
+				
+			case "/":
+				result=number1/number2;
+				break;
+				
+			default:
+				break;
+		}
+		
+		$("#result").val(result);
+	}); 
+});
+</script>
+</head>
+<body>
+
+	<h1>Simple jQuery Calculator Application</h1>
+	<div>
+		<input type="text" id="number1">
+		<select id="opSymbol">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+		</select>
+		<input type="text" id="number2">
+		<input type="button" value="=" id="equal">
+		<input type="text" id="result">
+	</div>
+
+</body>
+</html>
